@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume & Experience — Nora McGovern</title>
+    <meta name="description" content="Professional experience, internships, and academic achievements in marketing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resume-section {
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(8px);
+        }
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        .company {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        .date {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .skill-item {
+            background: rgba(255,255,255,0.4);
+            padding: 0.75rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0">
+                <a href="index.html" style="font-family:var(--heading-font);color:var(--accent-dark);text-decoration:none;font-size:1.25rem">About Me</a>
+                <div style="display:flex;gap:2rem;align-items:center">
+                    <a href="hobbies.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies</a>
+                    <a href="bulldog.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">UMN Duluth</a>
+                    <a href="resume.html" style="color:var(--accent);text-decoration:none;font-weight:500">Resume</a>
+                    <a href="goals.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Career Goals</a>
+                    <a href="index.html#contact" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top:6rem;padding-bottom:6rem">
+        <h1>Resume & Experience</h1>
+        <p class="lead">A detailed look at my professional experience, internships, and academic achievements.</p>
+        
+        <div style="text-align: center; margin: 2rem 0 3rem;">
+            <a href="Nora McGovern Job Resume.docx" download style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 500; transition: all 0.2s ease">
+                <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 16L7 11H17L12 16Z" fill="currentColor"/>
+                    <path d="M12 2V11M12 16L7 11H17L12 16ZM6 22H18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Download Full Resume
+            </a>
+        </div>
+        
+        <div class="resume-section">
+            <h2>Education</h2>
+            <div class="experience-item">
+                <h3>Bachelor of Arts</h3>
+                <p class="company">University of Minnesota Duluth | Duluth, MN</p>
+                <p class="date">Expected Graduation: December 2026</p>
+                <p>Marketing & Sustainable Businesses</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Associates of Arts</h3>
+                <p class="company">Normandale Community College | Bloomington, MN</p>
+                <p class="date">May 2023</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>High School Diploma</h3>
+                <p class="company">Thomas Jefferson High School | Bloomington, MN</p>
+                <p class="date">June 2021</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Retail Sales Specialist</h3>
+                <p class="company">REI Co-op | Bloomington, MN</p>
+                <p class="date">April 2022 - August 2025</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Shift Supervisor</h3>
+                <p class="company">Dunkin' Donuts | Bloomington, MN</p>
+                <p class="date">July 2021 - April 2022</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Dietary Aide</h3>
+                <p class="company">Minnesota Masonic Homes | Bloomington, MN</p>
+                <p class="date">December 2018 - July 2021</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Internship Experience</h2>
+            <div class="experience-item">
+                <h3>Social Media Ambassador</h3>
+                <p class="company">Fizz Social | Remote Internship</p>
+                <p class="date">April 2025 - Present</p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Team Collaboration</div>
+                <div class="skill-item">Customer Service and Care</div>
+                <div class="skill-item">Problem-Solving</div>
+                <div class="skill-item">Multitasking Efficiency</div>
+                <div class="skill-item">Attention to Detail Focus</div>
+                <div class="skill-item">Social Media Marketing</div>
+                <div class="skill-item">Content Strategy</div>
+                <div class="skill-item">Data Analysis</div>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h2>Certifications</h2>
+            <div class="experience-item">
+                <h3>Microsoft Office Proficiency</h3>
+                <p class="company">Proficient in Microsoft Word, Excel, PowerPoint, and Outlook</p>
+            </div>
+            <div class="experience-item">
+                <h3>Marketing Newsletter Experience</h3>
+                <p class="company">Content creation and distribution for marketing newsletters</p>
+            </div>
+            <div class="experience-item">
+                <h3>Social Media Management</h3>
+                <p class="company">Experience in platform management and content strategy</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding:4rem 0;text-align:center;color:var(--muted);font-size:0.9rem">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Nora McGovern. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

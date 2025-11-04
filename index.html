@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nora McGovern — Marketing Student</title>
+    <meta name="description" content="Nora McGovern - Marketing student passionate about digital strategy, brand development, and innovative campaign design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#fff5f2;
+        --card:#fff8f6;
+        --accent:#ff8b7c;
+        --accent-dark:#e57a6d;
+        --muted:#b88d86;
+        --text:#5d4741;
+        --heading-font:'Playfair Display',serif;
+        --body-font:Inter,system-ui,-apple-system,sans-serif;
+      }
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        font-family:var(--body-font);
+        background:linear-gradient(180deg,#ffe8e2 0%,var(--bg) 100%);
+        color:var(--text);
+        line-height:1.6;
+        font-weight:300;
+        min-height:100vh;
+      }
+      .container{
+        max-width:1200px;
+        margin:0 auto;
+        padding:0 1.5rem;
+      }
+      .hero{
+        min-height:90vh;
+        display:flex;
+        align-items:center;
+        position:relative;
+        overflow:hidden;
+      }
+      .hero::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:radial-gradient(70% 70% at 50% 100%, rgba(255,139,124,0.08) 0%, transparent 100%);
+        pointer-events:none;
+      }
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 3rem;
+        align-items: center;
+        width: 100%;
+      }
+      .profile-image {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        object-fit: contain;
+        box-shadow: 0 8px 24px rgba(255,139,124,0.15);
+      }
+      @media (max-width: 768px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .profile-image {
+          margin: 0 auto;
+          max-width: 220px;
+          order: -1;
+        }
+      }
+      h1,h2,h3{
+        font-family:var(--heading-font);
+        font-weight:400;
+        letter-spacing:-0.02em;
+        line-height:1.2;
+      }
+      h1{
+        font-size:clamp(2.5rem,6vw,4rem);
+        margin:0 0 1.5rem;
+        color:var(--accent-dark);
+      }
+      h2{
+        font-size:clamp(1.8rem,4vw,2.5rem);
+        color:var(--accent);
+        margin:2rem 0 1rem;
+      }
+      .lead{
+        font-size:clamp(1.1rem,2vw,1.25rem);
+        color:var(--muted);
+        font-weight:300;
+        max-width:44ch;
+        margin:0 0 2rem;
+      }
+      .stats{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        gap:2rem;
+        margin:3rem 0;
+      }
+      .stat{
+        text-align:center;
+        padding:1.5rem;
+        background:rgba(255,255,255,0.6);
+        border-radius:12px;
+        backdrop-filter:blur(8px);
+        transition:transform 0.2s ease;
+      }
+      .stat:hover{
+        transform:translateY(-4px);
+      }
+      .stat-number{
+        font-family:var(--heading-font);
+        font-size:2.5rem;
+        color:var(--accent);
+        margin:0 0 0.5rem;
+      }
+      .stat-label{
+        color:var(--muted);
+        font-size:0.9rem;
+        text-transform:uppercase;
+        letter-spacing:0.05em;
+      }
+      @media (prefers-reduced-motion: no-preference){
+        .hero{
+          animation: fadeIn 1s ease-out;
+        }
+        .stat,.expertise-card{
+          transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .stat:hover,.expertise-card:hover{
+          transform: translateY(-4px);
+          box-shadow: 0 12px 24px rgba(255,139,124,0.12);
+        }
+        nav a{
+          transition: opacity .2s ease, color .2s ease;
+          position: relative;
+        }
+        nav a::after{
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: var(--accent);
+          transform: scaleX(0);
+          transition: transform .2s ease;
+        }
+        nav a:hover{
+          color: var(--accent);
+        }
+        nav a:hover::after{
+          transform: scaleX(1);
+        }
+        @keyframes fadeIn{
+          from{
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+        <header class="header">
+      <div class="container">
+        <nav style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0">
+          <a href="index.html" style="font-family:var(--heading-font);color:var(--accent-dark);text-decoration:none;font-size:1.25rem">Nora McGovern</a>
+          <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
+            <a href="index.html#hobbies" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies</a>
+            <a href="hobbies.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies Page</a>
+            <a href="bulldog.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">UMN Duluth</a>
+            <a href="resume.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Resume</a>
+            <a href="goals.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Career Goals</a>
+            <a href="game.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Game</a>
+            <a href="index.html#contact" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div>
+              <h1>Nora McGovern</h1>
+              <div style="font-family:var(--heading-font);color:var(--accent);font-size:1.5rem;margin:-0.5rem 0 1rem">Marketing Student</div>
+              <p class="lead">Hi, I'm Nora! I'm an aspiring marketing professional who combines fresh perspectives with data-driven strategies to create engaging brand experiences.</p>
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat-number">6</div>
+                  <div class="stat-label">Years Work Experience</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-number">2</div>
+                  <div class="stat-label">Internships</div>
+                </div>
+              </div>
+            </div>
+            <img src="6265F35F-121D-46DC-B407-B83AAEB805A4.JPG" alt="Nora McGovern" class="profile-image">
+          </div>
+        </div>
+      </section>
+
+            <section id="education" style="padding:6rem 0;background:rgba(255,255,255,0.4)">
+        <div class="container">
+          <h2>Education & Skills</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem">
+            <div style="padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">Current Studies</h3>
+              <p style="color:var(--text);margin:0;line-height:1.6">Bachelor of Business Administration in Marketing<br>University of Minnesota Duluth<br>Expected Graduation: 2027<br>Minor in Sustainable Businesses and Organizations</p>
+            </div>
+            <div style="padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">Key Skills</h3>
+              <p style="color:var(--text);margin:0;line-height:1.6">Social Media Marketing, Retail Physical Merchandising, Retail Digital Marketing, Microsoft Office Proficiency</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hobbies" style="padding:6rem 0">
+        <div class="container">
+          <h2>Hobbies & Interests</h2>
+          <div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:2rem;margin-top:2rem">
+            <div style="padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">The Outdoors</h3>
+              <p style="color:var(--text);margin:0 0 1.5rem;line-height:1.6;font-style:italic">I love doing anything outdoors. Camping, hiking, swimming, paddleboarding, biking, and more!</p>
+              <div class="slideshow-container" style="position:relative;max-width:100%;margin:0 auto">
+                <div class="slide" style="display:none;text-align:center">
+                  <img src="../hobby photos/17FF2477-EE5A-4269-9384-3D5495A3835B.JPG" alt="Outdoor Adventure 1" style="width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+                </div>
+                <div class="slide" style="display:none;text-align:center">
+                  <img src="../hobby photos/D566C395-7A82-4CB4-A2F0-17903CCBC6A0.JPG" alt="Outdoor Adventure 2" style="width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+                </div>
+                <div class="slide" style="display:none;text-align:center">
+                  <img src="../hobby photos/DB6913EA-71DC-4CA0-989D-D92796BFFFC2.JPG" alt="Outdoor Adventure 3" style="width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+                </div>
+                <div class="slide" style="display:none;text-align:center">
+                  <img src="../hobby photos/EF92CF0D-57DE-46FD-8968-DA6D0949925B.JPG" alt="Outdoor Adventure 4" style="width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+                </div>
+                <div class="slide" style="display:none;text-align:center">
+                  <img src="../hobby photos/F6917B11-2A1E-4B96-BB41-A55EC660262F.JPG" alt="Outdoor Adventure 5" style="width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1)">
+                </div>
+                <div style="text-align:center;margin-top:1rem">
+                  <span class="dot" onclick="currentSlide(1)" style="height:12px;width:12px;margin:0 4px;background-color:#bbb;border-radius:50%;display:inline-block;cursor:pointer;transition:background-color 0.3s ease"></span>
+                  <span class="dot" onclick="currentSlide(2)" style="height:12px;width:12px;margin:0 4px;background-color:#bbb;border-radius:50%;display:inline-block;cursor:pointer;transition:background-color 0.3s ease"></span>
+                  <span class="dot" onclick="currentSlide(3)" style="height:12px;width:12px;margin:0 4px;background-color:#bbb;border-radius:50%;display:inline-block;cursor:pointer;transition:background-color 0.3s ease"></span>
+                  <span class="dot" onclick="currentSlide(4)" style="height:12px;width:12px;margin:0 4px;background-color:#bbb;border-radius:50%;display:inline-block;cursor:pointer;transition:background-color 0.3s ease"></span>
+                  <span class="dot" onclick="currentSlide(5)" style="height:12px;width:12px;margin:0 4px;background-color:#bbb;border-radius:50%;display:inline-block;cursor:pointer;transition:background-color 0.3s ease"></span>
+                </div>
+              </div>
+            </div>
+            <div style="padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">Cooking</h3>
+              <p style="color:var(--text);margin:0;line-height:1.6">• Trying New Recipes<br>• Baking<br>• International Cuisine<br>• Meal Planning</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" style="padding:6rem 0;background:rgba(255,255,255,0.4)">
+
+      <section id="projects" style="padding:6rem 0">
+        <div class="container">
+          <h2>Featured Projects</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;margin-top:2rem">
+            <div style="margin:0;padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">Social Media Management</h3>
+              <p style="margin:0 0 1rem;color:var(--text)">Managed the Instagram account for a startup app with the goal of capturing college life at UMN Duluth in the form of digestable and relatable content with the end goal of connecting students and integrating them into the university's social culture.</p>
+              <p style="color:var(--muted);font-size:0.9rem">Skills: Strategy, Analytics, Content Creation</p>
+            </div>
+            <div style="margin:0;padding:2rem;background:rgba(255,255,255,0.6);border-radius:12px;backdrop-filter:blur(8px)">
+              <h3 style="color:var(--accent-dark);margin:0 0 1rem;font-size:1.5rem">Small Business Newsletter Project</h3>
+              <p style="margin:0 0 1rem;color:var(--text)">Tasked with creating and maintaining an E-newsletter for a local small business that wanted to focus on retaining their current loyal customer base and highlighting new and highlighted products</p>
+              <p style="color:var(--muted);font-size:0.9rem">Skills: Creative Writing, Strategic Marketing Skills, Content Curation</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="contact" style="padding:6rem 0;background:rgba(255,255,255,0.4)">
+        <div class="container" style="text-align:center">
+          <h2>Let's Connect</h2>
+          <p style="color:var(--muted);max-width:600px;margin:1rem auto 2rem">Looking for a passionate marketing intern or interested in collaborating on a project? I'd love to hear from you!</p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;flex-direction:column;align-items:center">
+          </div>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+            <a href="mailto:noramcgovern3@gmail.com" style="display:inline-block;padding:1rem 2rem;background:var(--accent);color:white;text-decoration:none;border-radius:8px;font-weight:500;transition:all 0.2s ease">Send Email</a>
+            <a href="https://linkedin.com" target="_blank" style="display:inline-block;padding:1rem 2rem;background:transparent;border:1px solid var(--accent);color:var(--accent);text-decoration:none;border-radius:8px;font-weight:500;transition:all 0.2s ease">LinkedIn Profile</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <footer style="padding:4rem 0;text-align:center;color:var(--muted);font-size:0.9rem">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Nora McGovern. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      // set the current year in the footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Slideshow functionality
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        
+        for (i = 0; i < dots.length; i++) {
+          dots[i].style.backgroundColor = "#bbb";
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].style.backgroundColor = "var(--accent)";
+      }
+      
+      // Auto-advance slideshow every 4 seconds
+      setInterval(function() {
+        slideIndex++;
+        if (slideIndex > 5) slideIndex = 1;
+        showSlides(slideIndex);
+      }, 4000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UMN Duluth — Nora McGovern</title>
+    <meta name="description" content="My experience as a student at the University of Minnesota Duluth." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .experience-card {
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+        }
+        .experience-card:hover {
+            transform: translateY(-4px);
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0">
+                                <a href="index.html" style="font-family:var(--heading-font);color:var(--accent-dark);text-decoration:none;font-size:1.25rem">About Me</a>
+                <div style="display:flex;gap:2rem;align-items:center">
+                    <a href="hobbies.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies</a>
+                    <a href="bulldog.html" style="color:var(--accent);text-decoration:none;font-weight:500">UMN Duluth</a>
+                    <a href="resume.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Resume</a>
+                    <a href="goals.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Career Goals</a>
+                    <a href="index.html#contact" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top:6rem;padding-bottom:6rem">
+        <h1>UMN Duluth Experience</h1>
+        <p class="lead">My journey and experiences at the University of Minnesota Duluth.</p>
+        
+        <div class="experience-card">
+            <h2>Campus Life</h2>
+            <p>Active member of the Marketing Club and Student Government Association. Participating in campus traditions and events has shaped my college experience and professional growth.</p>
+        </div>
+
+        <div class="experience-card">
+            <h2>Academic Excellence</h2>
+            <p>Dean's List recipient maintaining a 3.9 GPA while balancing extracurricular activities and internships. Focused on marketing courses with emphasis on digital strategies and brand development.</p>
+        </div>
+
+        <div class="experience-card">
+            <h2>Community Involvement</h2>
+            <p>Volunteer for campus marketing initiatives, helping promote student events and organizations. Contributing to the vibrant campus culture through creative marketing solutions.</p>
+        </div>
+
+        <div class="experience-card">
+            <h2>Campus Life</h2>
+            <p>Proud member of the UMD community and active participant in campus activities. The spirit of determination and excellence at UMN Duluth guides my academic and professional journey.</p>
+        </div>
+    </main>
+
+    <footer style="padding:4rem 0;text-align:center;color:var(--muted);font-size:0.9rem">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Nora McGovern. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

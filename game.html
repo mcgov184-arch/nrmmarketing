@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Career Goals — Nora McGovern</title>
+    <meta name="description" content="My professional aspirations and career objectives in marketing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .goal-card {
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+        }
+        .goal-card:hover {
+            transform: translateY(-4px);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+            opacity: 0.3;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+      </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0">
+                <a href="index.html" style="font-family:var(--heading-font);color:var(--accent-dark);text-decoration:none;font-size:1.25rem">About Me</a>
+                <div style="display:flex;gap:2rem;align-items:center">
+                    <a href="hobbies.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies</a>
+                    <a href="bulldog.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">UMN Duluth</a>
+                    <a href="resume.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Resume</a>
+                    <a href="goals.html" style="color:var(--text);text-decoration:none;font-weight:500">Career Goals</a>
+                    <a href="game.html" style="color:var(--accent);text-decoration:none;font-weight:500;opacity:.9">Game</a>
+                    <a href="index.html#contact" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main 
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f1f5ec;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+
+
+    #game 
+      position: relative;
+      width: 800px;
+      height: 200px;
+      margin: 40px auto;
+      background: #87ceeb;
+      border: 2px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+
+
+    #startScreen 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    
+
+
+    #startButton 
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: #00B894;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+
+
+    #startButton:hover 
+      background: #00a884;
+      transform: translateY(-2px);
+    
+
+
+    #ground 
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      background: #654321;
+    
+
+
+    #bulldog 
+      position: absolute;
+      bottom: 40px;
+      width: 60px;
+      height: 60px;
+      background: url('images/bulldog.avif') no-repeat center/contain;
+      transition: height 0.2s, bottom 0.2s;
+    
+
+
+    #bulldog.ducking 
+      height: 35px;
+      bottom: 40px;
+    
+
+
+    .obstacle 
+      position: absolute;
+      background: #555;
+      border-radius: 4px;
+    
+
+
+    .obstacle.low 
+      bottom: 90px;
+      width: 30px;
+      height: 20px;
+    
+
+
+    .obstacle.high 
+      bottom: 40px;
+      width: 20px;
+      height: 40px;
+    
+
+
+    #score 
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #2f4f4f;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px #fff;
+    
+
+
+    #leaderboard 
+      margin: 20px auto;
+      max-width: 400px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+
+
+    #leaderboard h2 
+      text-align: center;
+      color: #2f4f4f;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    
+
+
+    #leaderboard ol {
+      list-style: none;
+      padding: 0;
+    }
+
+
+    #leaderboard li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      margin: 8px 0;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: transform 0.2s;
+      border-left: 4px solid #00B894;
+    }
+
+
+    #leaderboard li:hover {
+      transform: translateX(5px);
+    }
+
+
+    #leaderboard li .rank {
+      font-weight: bold;
+      color: #00B894;
+      margin-right: 15px;
+    }
+
+
+    #leaderboard li .score {
+      font-weight: bold;
+      color: #2f4f4f;
+    }
+
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        padding: 0;
+      }
+
+
+      nav li {
+        flex: unset;
+        width: 100%;
+      }
+
+
+      nav a {
+        padding: 12px;
+      }
+
+
+      main {
+        width: 95%;
+        padding: 10px;
+      }
+
+
+      #game {
+        width: 100%;
+        height: 180px;
+      }
+    }
+ 
+  main>
+    <h1>Bulldog Runner Game</h1>
+    <p>Press <strong>Space</strong> or <strong>↑</strong> to jump. Press <strong>↓</strong> to duck under obstacles!</p>
+
+
+    <div id="game">
+      <div id="startScreen">
+        <button id="startButton">Start Game</button>
+      </div>
+      <div id="ground"></div>
+      <div id="bulldog"></div>
+      <div id="score">Score: 0</div>
+    </div>
+
+
+    <section id="leaderboard">
+      <h2>🏆 Top 5 Scores</h2>
+      <ol id="scoreList"></ol>
+    </section>
+  </main>
+
+
+  <script>
+    const game = document.getElementById('game');
+    const bulldog = document.getElementById('bulldog');
+    const scoreDisplay = document.getElementById('score');
+    const scoreList = document.getElementById('scoreList');
+    const groundHeight = 40;
+    const gameWidth = game.clientWidth;
+
+
+    let isJumping = false;
+    let isDucking = false;
+    let jumpHeight = 0;
+    let jumpSpeed = 0;
+    let duckTimeout = null;
+    let obstacles = [];
+    let gameSpeed = 6;
+    let score = 0;
+    let gameOver = false;
+    let gameStarted = false;
+    let obstacleInterval;
+    const startScreen = document.getElementById('startScreen');
+    const startButton = document.getElementById('startButton');
+
+
+    startButton.addEventListener('click', startGame);
+
+
+    function resetGame() {
+      // Clear existing obstacles
+      while (obstacles.length > 0) {
+        const obstacle = obstacles.pop();
+        if (obstacle && obstacle.parentNode) {
+          obstacle.parentNode.removeChild(obstacle);
+        }
+      }
+     
+      // Reset game state
+      score = 0;
+      scoreDisplay.textContent = 'Score: 0';
+     
+      // Reset bulldog position
+      jumpHeight = 0;
+      jumpSpeed = 0;
+      isJumping = false;
+      isDucking = false;
+      if (duckTimeout) {
+        clearTimeout(duckTimeout);
+      }
+      bulldog.style.bottom = groundHeight + 'px';
+      bulldog.classList.remove('ducking');
+     
+      // Clear existing interval
+      if (obstacleInterval) {
+        clearInterval(obstacleInterval);
+      }
+    }
+
+
+    function startGame() {
+      resetGame();
+      gameStarted = true;
+      gameOver = false;
+      startScreen.style.display = 'none';
+     
+      // Start generating obstacles
+      obstacleInterval = setInterval(() => {
+        if (!gameOver && gameStarted) {
+          createObstacle();
+        }
+      }, 1500);
+
+
+      // Start the game loop
+      requestAnimationFrame(update);
+    }
+
+
+    function createObstacle() {
+      const obstacle = document.createElement('div');
+      obstacle.classList.add('obstacle');
+
+
+      const isLow = Math.random() < 0.5;
+      obstacle.classList.add(isLow ? 'low' : 'high');
+
+
+      obstacle.style.left = gameWidth + 'px';
+      game.appendChild(obstacle);
+      obstacles.push(obstacle);
+    }
+
+
+    function jump() {
+      if (isJumping || isDucking) return;
+      isJumping = true;
+      jumpSpeed = 15;
+    }
+
+
+    function duck() {
+      if (isJumping || isDucking) return;
+      isDucking = true;
+      bulldog.classList.add('ducking');
+      duckTimeout = setTimeout(() => {
+        bulldog.classList.remove('ducking');
+        isDucking = false;
+      }, 800);
+    }
+
+
+    function update() {
+      if (gameOver || !gameStarted) return;
+
+
+      if (isJumping) {
+        jumpHeight += jumpSpeed;
+        jumpSpeed -= 1;
+
+
+        if (jumpHeight <= 0) {
+          jumpHeight = 0;
+          isJumping = false;
+        }
+
+
+        bulldog.style.bottom = groundHeight + jumpHeight + 'px';
+      }
+
+
+      obstacles.forEach((obs, index) => {
+        let left = parseInt(obs.style.left);
+        left -= gameSpeed;
+
+
+        if (left + obs.clientWidth < 0) {
+          game.removeChild(obs);
+          obstacles.splice(index, 1);
+          score++;
+          scoreDisplay.textContent = 'Score: ' + score;
+        } else {
+          obs.style.left = left + 'px';
+
+
+          let bulldogRect = bulldog.getBoundingClientRect();
+          let obsRect = obs.getBoundingClientRect();
+
+
+          if (
+            bulldogRect.right > obsRect.left &&
+            bulldogRect.left < obsRect.right &&
+            bulldogRect.bottom > obsRect.top &&
+            bulldogRect.top < obsRect.bottom
+          ) {
+            gameOver = true;
+            gameStarted = false;
+            clearInterval(obstacleInterval);
+            saveScore(score);
+            startScreen.style.display = 'flex';
+            startButton.textContent = 'Play Again';
+          }
+        }
+      });
+
+
+      requestAnimationFrame(update);
+    }
+
+
+    // Game starts when start button is clicked
+
+
+    document.addEventListener('keydown', (e) => {
+      if (!gameStarted || gameOver) return;
+      if (e.code === 'Space' || e.code === 'ArrowUp') {
+        e.preventDefault(); // Prevent page scrolling
+        jump();
+      } else if (e.code === 'ArrowDown') {
+        e.preventDefault(); // Prevent page scrolling
+        duck();
+      }
+    });
+
+
+    // Leaderboard Logic
+    function saveScore(newScore) {
+      let scores = JSON.parse(localStorage.getItem('bulldogHighScores')) || [];
+      scores.push(newScore);
+      scores.sort((a, b) => b - a);
+      scores = scores.slice(0, 5);
+      localStorage.setItem('bulldogHighScores', JSON.stringify(scores));
+      displayScores();
+    }
+
+
+    function displayScores() {
+      const scores = JSON.parse(localStorage.getItem('bulldogHighScores')) || [];
+      scoreList.innerHTML = '';
+      scores.forEach((s, i) => {
+        const li = document.createElement('li');
+        const rank = document.createElement('span');
+        rank.className = 'rank';
+        rank.textContent = `#${i + 1}`;
+        const score = document.createElement('span');
+        score.className = 'score';
+        score.textContent = `${s} points`;
+        li.appendChild(rank);
+        li.appendChild(score);
+        scoreList.appendChild(li);
+      });
+
+
+      // Fill empty slots if less than 5 scores
+      while (scoreList.children.length < 5) {
+        const li = document.createElement('li');
+        const rank = document.createElement('span');
+        rank.className = 'rank';
+        rank.textContent = `#${scoreList.children.length + 1}`;
+        const score = document.createElement('span');
+        score.className = 'score';
+        score.textContent = '---';
+        li.appendChild(rank);
+        li.appendChild(score);
+        scoreList.appendChild(li);
+      }
+    }
+
+
+    displayScores();
+    update();
+  </script>
+</body>
+</html>
+
+

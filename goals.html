@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Career Goals — Nora McGovern</title>
+    <meta name="description" content="My professional aspirations and career objectives in marketing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .goal-card {
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+        }
+        .goal-card:hover {
+            transform: translateY(-4px);
+        }
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+            opacity: 0.3;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 0">
+                <a href="index.html" style="font-family:var(--heading-font);color:var(--accent-dark);text-decoration:none;font-size:1.25rem">About Me</a>
+                <div style="display:flex;gap:2rem;align-items:center">
+                    <a href="hobbies.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Hobbies</a>
+                    <a href="bulldog.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">UMN Duluth</a>
+                    <a href="resume.html" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Resume</a>
+                    <a href="goals.html" style="color:var(--accent);text-decoration:none;font-weight:500">Career Goals</a>
+                    <a href="index.html#contact" style="color:var(--text);text-decoration:none;font-weight:500;opacity:.9">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top:6rem;padding-bottom:6rem">
+        <h1>Career Goals</h1>
+        <p class="lead">My vision for the future and the steps I'm taking to achieve it.</p>
+        
+        <div class="goal-card">
+            <h2>Short-Term Goals</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Summer 2026</h3>
+                    <p>Complete digital marketing internship at a major tech company to gain hands-on experience in campaign management and analytics.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Fall 2026</h3>
+                    <p>Graduate with honors and secure a position as a Marketing Coordinator or Digital Marketing Specialist.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="goal-card">
+            <h2>Mid-Term Goals (2-5 Years)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Marketing Manager</h3>
+                    <p>Progress to a management role overseeing digital marketing strategies and team projects.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Professional Development</h3>
+                    <p>Obtain advanced certifications in digital marketing and potentially pursue an MBA with marketing focus.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="goal-card">
+            <h2>Long-Term Vision</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Marketing Director</h3>
+                    <p>Lead marketing strategy for a forward-thinking company or establish my own marketing consultancy.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Industry Impact</h3>
+                    <p>Contribute to the marketing field through thought leadership, mentoring, and innovative campaign strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="goal-card">
+            <h2>Current Steps</h2>
+            <ul style="padding-left:1.5rem;line-height:1.6">
+                <li>Active participation in Marketing Club leadership</li>
+                <li>Building portfolio through internships and project work</li>
+                <li>Networking with industry professionals</li>
+                <li>Staying current with marketing trends and technologies</li>
+                <li>Developing both creative and analytical skills</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer style="padding:4rem 0;text-align:center;color:var(--muted);font-size:0.9rem">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Nora McGovern. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
